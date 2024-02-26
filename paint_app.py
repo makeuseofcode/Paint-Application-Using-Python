@@ -30,7 +30,7 @@ class DrawApp:
             relief=tk.RIDGE,
             bg="white",
         )
-        self.color_frame.place(x=10, y=80, width=90, height=180)
+        self.color_frame.place(x=10, y=80, width=130, height=180)
         colors = [
             "blue",
             "red",
@@ -52,13 +52,13 @@ class DrawApp:
                 bg=color,
                 bd=2,
                 relief=tk.RIDGE,
-                width=3,
+                width=1,
                 command=lambda col=color: self.select_color(col),
             ).grid(row=i, column=j, padx=2, pady=2)
             i += 1
             if i == 4:
                 i = 0
-                j = 1
+                j += 1
         self.eraser_btn = tk.Button(
             self.root,
             text="Eraser",
